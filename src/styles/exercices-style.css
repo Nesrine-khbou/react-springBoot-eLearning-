@@ -1,0 +1,85 @@
+#list-of-exercises ul {
+    width: 80%;
+    margin: 0 auto 2rem 9rem;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 1rem 1rem;
+}
+
+.exercise-option {
+    border: 1px solid rgb(179, 178, 178);
+    width: 23rem;
+    border-radius: 10px;
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+.type-btn{
+    background-color: rgb(236, 77, 63);
+    color: white;
+    height: 1.8rem;
+    width: 12rem;
+    padding-top: 0.8rem;
+    font-size: 1rem;
+}
+
+
+.exercise-option h2{
+    width: 20rem;
+    font-size: 1.1rem;
+    color: rgb(81, 81, 81);
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.exercise-details{
+    text-align: left;
+    font-size: 0.95rem;
+    color: rgb(36, 36, 36);
+    margin-bottom: 2rem ;
+}
+
+.exercise-option a{
+    position: relative;
+    right: 8rem;
+    color: aliceblue;
+    background-color: rgb(4, 186, 165);
+    width: 8rem;
+    height: 3rem;
+    padding: 0.7rem 1rem;
+    transition: background-color 0.3s ease-out;
+    transition: box-shadow 0.2s ease-out;
+}
+
+.exercise-option a:hover{
+    background-color: rgb(1, 154, 136);
+    box-shadow: 1px 1px 4px rgba(1, 154, 136, 0.786);
+}
+
+.exercise-option a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    left: 17.5rem;
+    color: aliceblue;
+    background-color: rgb(4, 141, 226);
+    width: 6rem;
+    height: 2.2rem;
+    padding: 0.2rem 0;
+    transition: background-color 0.3s ease-out;
+    transition: box-shadow 0.3s ease-out;
+}
+
+.exercise-option a:hover{
+    background-color: rgb(5, 116, 185);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0,0.2);
+}
+
+.svgStyle {
+    height: 1.5rem;
+    padding: 0 0.3rem 0 0.4rem;
+}
+
+#ex2 {
+    margin-top: 1.2rem;
+}

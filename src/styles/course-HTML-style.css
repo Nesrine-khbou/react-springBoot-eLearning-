@@ -1,0 +1,270 @@
+body {
+    text-align: start;
+}
+
+main {
+    padding: 0rem 10.5rem 1rem 0rem;
+}
+
+#main-section{
+    display: flex;
+    flex-direction: row;
+}
+
+#main-content {
+    width: 60%;
+    font-size: 0.95rem;
+    margin: 1rem 0 1rem 11rem;
+}
+
+#course-intro p{
+    margin: 0.5rem 0rem;
+}
+
+#rating{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#to_learn {
+    border: 1px solid rgb(81, 81, 81);
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    width: 88%;
+    margin-top: 1.5rem;
+}
+
+#to_learn h3{
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.learning-step{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1.5rem;
+}
+
+.learning-step p{
+    margin: 0.15rem 0rem ;
+}
+
+.learning-step svg{
+    width: 1.1rem;
+    margin-right: 0.5rem;
+}
+
+#course-content-details{
+    width: 92%;
+    border: 1px solid rgb(81, 81, 81);
+    margin-right: 0;
+}
+
+.course-content-detail{
+    width: 92.7%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(31, 53, 70);
+    color: white;
+    padding: 0.6rem 2rem;
+    margin-right: 0;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title h3{
+    font-size: 1rem;
+}
+
+.title svg{
+    width: 1.5rem;
+    height: 1.4rem;
+    margin-right: 0.5rem;
+}
+
+.sub-info {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 0rem;
+
+}
+
+.sub-info svg{
+    width: 1.3rem;
+    height: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2.5rem;
+}
+
+#requirement{
+    padding: 1.5rem 0rem;
+}
+
+#requirement div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#requirement div img{
+    margin-right: 0.3rem;
+}
+
+#description{
+    padding-bottom: 0.5rem;
+}
+
+#description h3{
+    margin: 0;
+}
+
+#instructor{
+    margin: 0;
+}
+
+#instructor-name h3{
+    color: rgb(29, 135, 200);
+    padding: 0.3rem 0rem;
+    margin: 0;
+}
+
+#instructor-name p{
+    color:gray;
+    margin: 0;
+}
+
+#instructor-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#instructor-info img{
+    height: 7rem;
+    width: 7rem;
+}
+
+#instructor-info li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.4rem 0rem;
+}
+
+#instructor-info li p{
+    margin: 0;
+}
+
+#instructor-info svg{
+    width: 1.1rem;
+    padding-right: 0.3rem;
+}
+
+#student-feedback{
+    width: 93%;
+    text-align: center;
+    border: 1px solid rgb(162, 162, 162);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    padding: 0.5rem 0;
+}
+
+#reviews{
+    border: 1px solid rgb(81, 81, 81);
+    margin: 2rem 0;
+    width: 93%;
+}
+
+#review-sec{
+    border: 1px solid black;
+    width: 93%;
+}
+
+#rev-p{
+    padding-left: 4rem;
+}
+
+#reviews h3{
+    padding-left: 1rem;
+}
+
+#review {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#review img{
+    padding-right: 0.5rem;
+}
+
+#review p{
+    margin: 0.2rem 0;
+}
+
+span{
+    padding-left: 0.5rem;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+#rating-review{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+aside{
+    width: 22%;
+    height: 26rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0,0.2);
+    border-radius: 10px;
+    margin: 0;
+    margin-right: 15rem;
+}
+
+aside img{
+    width: 23rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+aside h2{
+    text-align: center;
+    background-color: rgb(11, 191, 161);
+    width: 85%;
+    margin: 1rem auto 1rem auto ;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+aside a{
+    text-align: center;
+    background-color:rgb(29, 135, 200);
+    position: relative;
+    left: 1.2rem;
+    padding: 0.65rem 7.3rem;
+    color: white;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}

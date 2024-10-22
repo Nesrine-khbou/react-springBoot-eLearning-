@@ -1,0 +1,113 @@
+#loginPage{
+    background-image: url("../assets/photos/images/login-bg2.jpg");
+    background-size:cover ;
+    padding: 2rem;
+}
+
+#space {
+    height:3.5rem;
+}
+
+form{
+    background-color: white;
+    width: 25%;
+    position: relative;
+    margin: 2rem auto 0rem auto;
+    padding: 4rem 1rem 12rem 1rem;
+    border-radius: 4px;
+}
+
+form h2{
+    color: rgb(44, 60, 90);
+    font-size: 1.4rem;
+}
+
+form label{
+    display: block;
+    text-align: left;
+    color: rgb(23, 33, 50);
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    font-size: 0.95rem;
+}
+
+form input{
+    display: block;
+    text-align: left;
+    height: 2rem;
+    width: 91% ;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    margin-left: 1rem;
+    padding: 0.2rem 0.2rem 0.2rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+::placeholder{
+    font-size: 0.8rem;
+    color: rgb(153, 153, 153);
+}
+
+
+#remember-me-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+#remember-me-checkbox input {
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+
+#remember-me-checkbox label {
+    margin: 0 0.3rem;
+}
+
+button {
+    width: 95%;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    border-color: transparent;
+    background-color: rgb(0, 197, 174) ;
+    border-radius: 4px;
+    transition: background-color 0.4s ease-out;
+    transition: box-shadow 0.4s ease-out;
+}
+
+button:hover{
+    background-color:  rgb(1, 172, 152);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0,0.2);
+}
+
+button svg {
+    height: 1.5rem;
+    padding: 0 0.3rem 0 0.4rem;
+    color: aliceblue;
+}
+
+button p{
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#forgot_password {
+    font-size: 0.95rem;
+    color: rgb(11, 125, 195);
+    width: 8rem;
+    position: relative;
+    right: 8.5rem;
+}
+
+#forgot_password:hover{
+    color: rgb(9, 98, 154);
+}

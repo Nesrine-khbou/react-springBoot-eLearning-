@@ -1,0 +1,187 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(9, 129, 178);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 5.5rem;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+}
+
+#page-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#page-title a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#page-title img {
+    padding-right: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#options ul {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#options li {
+    padding-right: 2rem;
+}
+
+#options a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 6.3rem ;
+    height: 2.6rem;
+    border-radius: 6px;
+    transition: box-shadow 0.3s ease-out;
+    transition: border-bottom 0.2s ease-out;
+}
+
+#options  a:hover {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.545);
+    border-bottom: 4px solid rgb(0, 197, 174);
+}
+
+#options img {
+    padding-right: 0.3rem;
+}
+
+#options p {
+    color: white;
+}
+
+#register-login {
+    display: flex;
+    flex-direction: row;
+}
+
+#register-login svg {
+    width: 1.7rem;
+    color: white;
+    padding-right: 0.3rem;
+}
+
+#register-login a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0.7rem;
+    width: 5rem ;
+    height: 2.6rem;
+    padding: 0 0.8rem;
+    border-radius: 8px;
+}
+
+#register-login p {
+    color: white;
+}
+
+#register{
+    background-color: rgba(53, 53, 52, 0.813);
+    transition: box-shadow 0.3s ease-out;
+}
+
+#register:hover {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.545);
+}
+
+#login {
+    background-color: rgb(0, 197, 174);
+    transition: background-color 0.2s ease-out;
+}
+
+#login:hover {
+    background-color: rgb(1, 172, 152);
+}
+
+#space {
+    padding-bottom: 4rem;
+}
+
+
+#main-title{
+    background-color: rgb(4, 186, 165);
+    height: 5rem;
+    width: 80%;
+    margin:0 auto 2rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-left: 8px solid rgb(1, 154, 136);
+}
+
+#main-title img{
+    margin-left: 0.5rem;
+    margin-right: 0.2rem;
+}
+
+#main-title p{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+footer {
+    background-color: rgb(29, 29, 29);
+    color: aliceblue;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+
+}
+
+footer h3 {
+    margin-bottom: 2rem;
+}
+#social-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+#social-media li {
+    margin-right: 2.8rem;
+}
+
+.more-info {
+    width: 50rem;
+    margin:0 auto 5rem auto;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 40px 20px;
+}
+
+.more-info a {
+    color: aliceblue;
+}
+
+#rights {
+    margin-top: 2rem;
+}

@@ -1,0 +1,62 @@
+#list-of-quizzes ul {
+    width: 80%;
+    margin: 0 auto 2rem 9rem;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 1rem 1rem;
+}
+
+.quiz-option {
+    border: 1px solid rgb(179, 178, 178);
+    width: 23rem;
+    border-radius: 10px;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.type-btn{
+    background-color: rgb(238, 132, 132);
+    color: white;
+    height: 1.3rem;
+    width: 3rem;
+    padding-top: 0.3rem;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+#js{
+    width: 4.5rem;
+}
+
+.quiz-option h2{
+    width: 20rem;
+    font-size: 1.3rem;
+    color: rgb(36, 36, 36);
+    text-align: left;
+    margin-left: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-details{
+    text-align: left;
+    margin-left: 0.5rem;
+    font-size: 0.95rem;
+    color: rgb(36, 36, 36);
+    margin-bottom: 2rem ;
+}
+
+.quiz-option a{
+    position: relative;
+    right: 8rem;
+    color: aliceblue;
+    background-color: rgb(4, 186, 165);
+    width: 8rem;
+    height: 3rem;
+    padding: 0.7rem 1rem;
+    transition: background-color 0.3s ease-out;
+    transition: box-shadow 0.2s ease-out;
+}
+
+.quiz-option a:hover{
+    background-color: rgb(1, 154, 136);
+    box-shadow: 1px 1px 4px rgba(1, 154, 136, 0.786);
+}

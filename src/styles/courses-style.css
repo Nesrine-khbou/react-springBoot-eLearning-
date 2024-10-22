@@ -1,0 +1,94 @@
+
+#search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#search input{
+    height: 2.5rem;
+    width: 77%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid grey;
+    font-size: 1.1rem;
+}
+
+#search img {
+    border-end-end-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#list-of-courses ul {
+    width: 80%;
+    margin: 0 auto 2rem 9rem;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 1rem 1rem;
+}
+
+.course-option {
+    border: 1px solid gray;
+    width: 23rem;
+    border-radius: 10px;
+}
+
+.web-tools-icons{
+    height: 11rem;
+    width: 23rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.free-btn{
+    background-color: rgb(4, 186, 165);
+    color: white;
+    height: 2rem;
+    width: 4.5rem;
+    padding-top: 0.7rem;
+    margin-left: 0.5rem;
+}
+
+.course-option h2{
+    width: 20rem;
+    font-size: 1.2rem;
+    color: rgb(81, 81, 81);
+    text-align: left;
+    margin-left: 0.5rem;
+}
+
+.stars-img{
+    display: block;
+    margin-left: 0.5rem;
+}
+
+.course-option a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    left: 16rem;
+    color: aliceblue;
+    background-color: rgb(4, 141, 226);
+    width: 6rem;
+    height: 2.2rem;
+    margin-bottom: 1rem;
+    padding: 0.2rem 0;
+    transition: background-color 0.3s ease-out;
+    transition: box-shadow 0.3s ease-out;
+}
+
+.course-option a:hover{
+    background-color: rgb(5, 116, 185);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0,0.2);
+}
+
+.course-option svg {
+    height: 1.5rem;
+    padding: 0 0.3rem 0 0.4rem;
+}
+
+
+

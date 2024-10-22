@@ -1,0 +1,84 @@
+
+#registerPage{
+    background-image: url("../assets/photos/images/login-bg2.jpg");
+    background-size:cover ;
+    padding: 2rem;
+}
+
+#space {
+    height:3.5rem;
+}
+
+form{
+    background-color: white;
+    width: 25%;
+    position: relative;
+    margin: 2rem auto 0rem auto;
+    padding: 4rem 1rem;
+    border-radius: 4px;
+}
+
+form h2{
+    color: rgb(44, 60, 90);
+    font-size: 1.4rem;
+}
+
+form label{
+    display: block;
+    text-align: left;
+    color: rgb(23, 33, 50);
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+}
+
+form input{
+    display: block;
+    text-align: left;
+    height: 2rem;
+    width: 91% ;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    margin-left: 1rem;
+    padding: 0.2rem 0.2rem 0.2rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+::placeholder{
+    font-size: 0.8rem;
+    color: rgb(153, 153, 153);
+}
+
+button {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    border-color: transparent;
+    background-color:rgb(49, 156, 223) ;
+    border-radius: 4px;
+    transition: background-color 0.4s ease-out;
+    transition: box-shadow 0.4s ease-out;
+}
+
+button:hover{
+    background-color: rgb(35, 134, 195);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0,0.2);
+}
+
+button svg {
+    height: 1.5rem;
+    padding: 0 0.3rem 0 0.4rem;
+    color: aliceblue;
+}
+
+button p{
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#space{
+    padding-bottom: 1rem;
+}
