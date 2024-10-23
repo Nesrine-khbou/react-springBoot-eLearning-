@@ -1,4 +1,5 @@
 import React from 'react';
+
 const CourseContentDetail = ({ title, lectures, time }) => {
     return (
         <div className="course-content-detail">
@@ -9,7 +10,7 @@ const CourseContentDetail = ({ title, lectures, time }) => {
                 <h3><strong>{title}</strong></h3>
             </div>
             <div>
-                <p>{lectures} lectures • {time}</p>
+                <p>{lectures} lectures. {time}</p>
             </div>
         </div>
     );

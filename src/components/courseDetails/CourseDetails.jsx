@@ -1,21 +1,21 @@
 import React from 'react';
 
-import CourseIntro from "./CourseIntro";
+import MainContent from "./mainSec/MainContent"
+import AsideSec from "./asideSec/AsideSec";
 
-import "../../styles/shared.css"
 import "../../styles/course-HTML-style.css"
+
 
 function CourseDetails(props) {
     return (
         <>
-            <div id="space"></div>
+            <div id="spacing"></div>
             <section id="main-section">
-                <section id="main-content">
-                    <CourseIntro/>
-                </section>
+                <MainContent/>
+                <AsideSec/>
             </section>
-        </>
-    )
-}
 
+            </>
+            )
+    }
 export default CourseDetails;

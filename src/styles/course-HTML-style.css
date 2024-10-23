@@ -1,4 +1,4 @@
-body {
+#main-section {
     text-align: start;
 }
 
@@ -57,13 +57,13 @@ main {
 }
 
 #course-content-details{
-    width: 92%;
+    width: 91%;
     border: 1px solid rgb(81, 81, 81);
     margin-right: 0;
 }
 
 .course-content-detail{
-    width: 92.7%;
+    width: 93.6%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -129,6 +129,7 @@ main {
 
 #description{
     padding-bottom: 0.5rem;
+
 }
 
 #description h3{
@@ -192,12 +193,12 @@ main {
     width: 93%;
 }
 
-#review-sec{
+.review-sec{
     border: 1px solid black;
     width: 93%;
 }
 
-#rev-p{
+.rev-p{
     padding-left: 4rem;
 }
 
@@ -205,17 +206,17 @@ main {
     padding-left: 1rem;
 }
 
-#review {
+.review {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-#review img{
+.review img{
     padding-right: 0.5rem;
 }
 
-#review p{
+.review p{
     margin: 0.2rem 0;
 }
 
@@ -225,26 +226,30 @@ span{
     color: gray;
 }
 
-#rating-review{
+.rating-review{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-aside{
-    width: 22%;
+aside {
+    width: 20rem; /* Fixed width for the card */
     height: 26rem;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0,0.2);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    margin: 0;
-    margin-right: 15rem;
+    margin: 0 auto; /* Center the card horizontally if needed */
+    margin-right: 15rem; /* Avoid excessive right margin */
 }
 
-aside img{
-    width: 23rem;
+
+aside img {
+    width: 100%; /* Make the image fit the container width */
+    height: 14rem; /* Set a fixed height to the image if necessary */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
 }
+
 
 aside h2{
     text-align: center;
@@ -257,14 +262,21 @@ aside h2{
     margin-bottom: 1.5rem;
 }
 
-aside a{
+aside a {
+    display: block; /* Ensure the link behaves like a block element */
     text-align: center;
-    background-color:rgb(29, 135, 200);
-    position: relative;
-    left: 1.2rem;
-    padding: 0.65rem 7.3rem;
+    background-color: rgb(29, 135, 200);
+    width: 85%; /* Make it consistent with the width of the h2 */
+    margin: 0 auto; /* Center the button */
+    padding: 0.65rem 0; /* Adjust padding for consistent look */
     color: white;
     border-radius: 6px;
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+
+#spacing{
+    padding-bottom: 7.5rem;
+
 }

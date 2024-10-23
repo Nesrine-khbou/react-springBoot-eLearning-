@@ -1,17 +1,18 @@
 import React from 'react';
 
-import pointIcon from "../../assets/photos/icons/point.PNG"
+import pointIcon from "../../../../assets/photos/icons/point.PNG"
 
-const Requirement = () => {
+function Requirements() {
     return (
         <div id="requirement">
             <h3><strong>Requirements</strong></h3>
             <div>
-                <img src={pointIcon} alt="point" />
+                <img src={pointIcon} alt="point"/>
                 <p>Nothing</p>
             </div>
         </div>
-    );
-};
 
-export default Requirement;
+    )
+}
+
+export default Requirements;

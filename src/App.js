@@ -9,6 +9,7 @@ import Quizzes from "./components/quizzes/Quizzes";
 import Exercises from "./components/exercices/Exercises";
 import Login from "./components/auth/login/Login";
 import Register from "./components/auth/register/Register";
+import CourseDetails from "./components/courseDetails/CourseDetails";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/exercises" element={<Exercises />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/course-HTML" element={<CourseDetails />} />
                 <Route path="*" element={<Home />} /> {/* Default page for unmatched routes */}
             </Routes>
             <Footer />

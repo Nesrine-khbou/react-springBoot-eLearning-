@@ -17,7 +17,7 @@ const CourseList = () => {
         {
             image: html_image,
             title: 'HTML',
-            detailsLink: 'course-HTML.html',
+            detailsLink: '/course-HTML',
         },
         {
             image: css_image,
