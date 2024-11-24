@@ -1,6 +1,6 @@
 import React from 'react';
 
-import htmlIcon from "../../../assets/photos/images/html.png"
+import htmlIcon from "../../../assets/photos/images/html.png";
 
 function AsideSec() {
     return (

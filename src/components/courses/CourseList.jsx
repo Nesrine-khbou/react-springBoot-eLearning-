@@ -1,76 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import CourseItem from './CourseItem';
 
-import html_image from "../../assets/photos/images/html.png";
-import css_image from "../../assets/photos/images/css.png";
-import js_image from "../../assets/photos/images/javascript.png";
-import angular_image from "../../assets/photos/images/angular10.png";
-import php_image from "../../assets/photos/images/php.png";
-import algo_image from "../../assets/photos/images/algorithms.png";
-import mern_image from "../../assets/photos/images/mern-stack.png";
-import mean_image from "../../assets/photos/images/mean-stack.png";
-import laravel_image from "../../assets/photos/images/laravel7.png";
-
-
 const CourseList = () => {
-    const courses = [
-        {
-            image: html_image,
-            title: 'HTML',
-            detailsLink: '/course-HTML',
-        },
-        {
-            image: css_image,
-            title: 'CSS',
-            detailsLink: '',
-        },
-        {
-            image: js_image,
-            title: 'JavaScript basics',
-            detailsLink: '',
-        },
-        {
-            image: angular_image,
-            title: 'Angular 10 : Drinks Application',
-            detailsLink: '',
-        },
-        {
-            image: php_image,
-            title: 'PHP 7 : E-commerce Application',
-            detailsLink: '',
-        },
-        {
-            image: algo_image,
-            title: 'Algorithms for beginners',
-            detailsLink: '',
-        },
-        {
-            image: mern_image,
-            title: 'MERN STACK for beginners',
-            detailsLink: '',
-        },
-        {
-            image: mean_image,
-            title: 'MEAN STACK for beginners',
-            detailsLink: '',
-        },
-        {
-            image: laravel_image,
-            title: 'Laravel 7 for beginners : E-commerce project',
-            detailsLink: '',
-        },
-    ];
+    const [courses, setCourses] = useState([]); // State to hold the courses data
+    const [loading, setLoading] = useState(true); // State to track loading status
+    const [error, setError] = useState(null); // State to handle errors
+
+    useEffect(() => {
+        // Fetch courses from the backend
+        axios.get('http://localhost:8080/api/courses')
+            .then((response) => {
+                setCourses(response.data); // Update courses state
+                setLoading(false); // Set loading to false
+            })
+            .catch((error) => {
+                console.error("Error fetching courses:", error);
+                setError('Failed to load courses'); // Set error message
+                setLoading(false); // Set loading to false
+            });
+    }, []);
+
+    // Handle loading state
+    if (loading) {
+        return <p>Loading courses...</p>;
+    }
+
+    // Handle error state
+    if (error) {
+        return <p>{error}</p>;
+    }
 
     return (
         <div id="list-of-courses">
             <ul>
-                {courses.map((course, index) => (
+                {courses.map((course) => (
                     <CourseItem
-                        key={index} // Use a unique key for each item in a real application
-                        image={course.image}
+                        key={course.id} // Use a unique key from the backend
+                        image={`${course.image}`} // Construct the full image path
                         title={course.title}
                         detailsLink={course.detailsLink}
                     />
+
                 ))}
             </ul>
         </div>

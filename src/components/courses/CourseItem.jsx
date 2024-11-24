@@ -1,12 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';  // Import Link for navigation
-
-import stars from "../../assets/photos/images/stars.PNG";
+import { Link } from 'react-router-dom';
+import stars from "../../assets/photos/images/stars.PNG"; // Static image
 
 const CourseItem = ({ image, title, detailsLink }) => {
+    // Dynamic import using a static path
+    const imgPath =String( `../../../public/coursesImages/${image}`);
+    console.log(imgPath);
+
     return (
         <li className="course-option">
-            <img src={image} alt={`${title}-icon`} className="web-tools-icons" />
+            <img src={`${image}`} alt={`${title}-icon`} className="web-tools-icons" />
             <p className="free-btn">Free</p>
             <h2>{title}</h2>
             <img src={stars} alt="stars" className="stars-img" />
