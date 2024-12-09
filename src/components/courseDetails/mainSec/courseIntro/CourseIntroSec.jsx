@@ -1,21 +1,18 @@
-import React from 'react';
+import React from "react";
+import stars from "../../../../assets/photos/images/stars-orange.PNG";
 
-import stars from "../../../../assets/photos/images/stars-orange.PNG"
-
-function CourseIntroSec() {
+function CourseIntroSec({ course }) {
     return (
         <div id="course-intro">
-            <h2><strong>HTML</strong></h2>
-            <p>General and basic rules of HTML and how to add various elements of web pages such as headings,
-                paragraphs, images and lists</p>
+            <h2><strong>{course.title}</strong></h2>
+            <p>{course.description}</p>
             <div id="rating">
-                <img src={stars} alt="stars"/>
-                <p>( 1 rating ) 193 students</p>
+                <img src={stars} alt="stars" />
+                <p> { course.enrolledStudents} students</p>
             </div>
-            <p>Created by <strong>Hamdaoui Wassim</strong></p>
+            <p>Created by <strong>{course.instructor.username}</strong></p>
         </div>
-
-    )
+    );
 }
 
 export default CourseIntroSec;

@@ -23,7 +23,7 @@ function App() {
                 <Route path="/exercises" element={<Exercises />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/course-HTML" element={<CourseDetails />} />
+                <Route path="/course/:id" element={<CourseDetails />} />
                 <Route path="*" element={<Home />} /> {/* Default page for unmatched routes */}
             </Routes>
             <Footer />

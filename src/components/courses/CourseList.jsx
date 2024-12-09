@@ -1,48 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import { getCourses } from '../../services/courseService'; // Import the service function
 import CourseItem from './CourseItem';
 
 const CourseList = () => {
     const [courses, setCourses] = useState([]); // State to hold the courses data
-    const [loading, setLoading] = useState(true); // State to track loading status
-    const [error, setError] = useState(null); // State to handle errors
+    const [loading, setLoading] = useState(true); // State to manage loading
 
+    // Fetch courses when the component mounts
     useEffect(() => {
-        // Fetch courses from the backend
-        axios.get('http://localhost:8080/api/courses')
-            .then((response) => {
-                setCourses(response.data); // Update courses state
-                setLoading(false); // Set loading to false
-            })
-            .catch((error) => {
-                console.error("Error fetching courses:", error);
-                setError('Failed to load courses'); // Set error message
-                setLoading(false); // Set loading to false
-            });
+        const fetchCourses = async () => {
+            try {
+                const data = await getCourses(); // Fetch courses from the API
+                setCourses(data); // Set the fetched courses in the state
+                console.log(data)
+            } catch (error) {
+                console.error("Failed to fetch courses:", error);
+            } finally {
+                setLoading(false); // Stop loading
+            }
+        };
+
+        fetchCourses();
     }, []);
 
-    // Handle loading state
     if (loading) {
-        return <p>Loading courses...</p>;
-    }
-
-    // Handle error state
-    if (error) {
-        return <p>{error}</p>;
+        return <p>Loading courses...</p>; // Show a loading message
     }
 
     return (
         <div id="list-of-courses">
             <ul>
-                {courses.map((course) => (
-                    <CourseItem
-                        key={course.id} // Use a unique key from the backend
-                        image={`${course.image}`} // Construct the full image path
-                        title={course.title}
-                        detailsLink={course.detailsLink}
-                    />
-
-                ))}
+                {courses.length > 0 ? (
+                    courses.map((course) => (
+                        <CourseItem
+                            key={course.id} // Unique key from the backend
+                            image={course.imageUrl} // Use the course image URL
+                            title={course.title}
+                            detailsLink={`/course/${course.id}`} // Dynamically set the details link
+                        />
+                    ))
+                ) : (
+                    <p>No courses available.</p> // Handle empty course list
+                )}
             </ul>
         </div>
     );
