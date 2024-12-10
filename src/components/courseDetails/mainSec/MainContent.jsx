@@ -13,8 +13,7 @@ function MainContent({ course }) {
             <CourseIntroSec course={course} />
             <ToLearnSec whatWillLearn={course.whatWillLearn} />
             <CourseContent course={course} />
-            <Requirements course={course} />
-            <Instructor course={course} />
+            <Instructor instructor={course.instructor} />
             <FeedbackSec course={course} />
             <ReviewsSec course={course} />
         </section>

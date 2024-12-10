@@ -1,26 +1,54 @@
-import React from 'react';
-
+import React from "react";
 import CourseContentDetail from "./CourseContentDetail";
 import SubInfo from "./SubInfo";
+import { getTotalDuration, filterContentsByCategory } from "../../../../services/contentService";
 
-const CourseContent = () => {
+const CourseContent = ({ course }) => {
+    const contents = course ? course.contents : []; // Fallback to empty array if course is null
+
+    // Filter contents by category
+    const introductionContents = filterContentsByCategory(contents, "INTRODUCTION");
+    const courseElementsContents = filterContentsByCategory(contents, "COURSE ELEMENTS");
+
     return (
         <div id="course-content">
-            <h3><strong>Course content</strong></h3>
-            <p>2 sections • 8 lectures • 1h 25 min total length</p>
+            <h3>
+                <strong>Course content</strong>
+            </h3>
+            <p>
+                2 sections • {contents.length} lectures • {getTotalDuration(contents)} total length
+            </p>
 
             <div id="course-content-details">
-                <CourseContentDetail title="INTRODUCTION" lectures="1" time="14.13 min" />
-                <SubInfo infoTitle="General structure" duration="14.13 min" />
+                {/* Introduction Section */}
+                <CourseContentDetail
+                    title="INTRODUCTION"
+                    lectures={introductionContents.length}
+                    time={getTotalDuration(introductionContents)}
+                />
+                {introductionContents.map((content) => (
+                    <SubInfo
+                        key={content.id}
+                        infoTitle={content.title}
+                        duration={`${content.videoDuration} min`}
+                        videoUrl={content.videoUrl}
+                    />
+                ))}
 
-                <CourseContentDetail title="HTML ELEMENTS" lectures="7" time="1h 11 min" />
-                <SubInfo infoTitle="Headings" duration="12.52 min" />
-                <SubInfo infoTitle="Paragraphs" duration="9.55 min" />
-                <SubInfo infoTitle="Images" duration="9.21 min" />
-                <SubInfo infoTitle="Lists" duration="10.52 min" />
-                <SubInfo infoTitle="Tables" duration="11.43 min" />
-                <SubInfo infoTitle="Links" duration="9.53 min" />
-                <SubInfo infoTitle="Divs" duration="9 min" />
+                {/* Course Elements Section */}
+                <CourseContentDetail
+                    title="COURSE ELEMENTS"
+                    lectures={courseElementsContents.length}
+                    time={getTotalDuration(courseElementsContents)}
+                />
+                {courseElementsContents.map((content) => (
+                    <SubInfo
+                        key={content.id}
+                        infoTitle={content.title}
+                        duration={`${content.videoDuration} min`}
+                        videoUrl={content.videoUrl}
+                    />
+                ))}
             </div>
         </div>
     );
