@@ -6,7 +6,7 @@ const HeroSection = () => {
         <section id="hero-section">
             <div id="bg-pic"></div>
             <div id="description">
-                <h1>Hamdaoui Academy</h1>
+                <h1>Nesrine Academy</h1>
                 <h2>"Everybody should learn to program a computer, because it teaches you how to think"</h2>
                 <h2>- Steve Jobs -</h2>
                 <a href="">

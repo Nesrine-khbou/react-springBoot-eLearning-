@@ -1,7 +1,9 @@
 import React from "react";
 import stars from "../../../../assets/photos/images/stars-orange.PNG";
 
+
 function CourseIntroSec({ course }) {
+    console.log("course  " + course );
     return (
         <div id="course-intro">
             <h2><strong>{course.title}</strong></h2>

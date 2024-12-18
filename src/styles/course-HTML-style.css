@@ -262,7 +262,7 @@ aside h2{
     margin-bottom: 1.5rem;
 }
 
-aside a {
+aside button {
     display: block; /* Ensure the link behaves like a block element */
     text-align: center;
     background-color: rgb(29, 135, 200);
@@ -280,3 +280,17 @@ aside a {
     padding-bottom: 7.5rem;
 
 }
+
+.enrolled-text {
+    display: block; /* Ensure the link behaves like a block element */
+    text-align: center;
+    background-color: rgb(29, 135, 200);
+    width: 85%; /* Make it consistent with the width of the h2 */
+    margin: 0 auto; /* Center the button */
+    padding: 0.65rem 0; /* Adjust padding for consistent look */
+    color: white;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+

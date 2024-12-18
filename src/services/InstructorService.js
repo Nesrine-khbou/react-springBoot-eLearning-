@@ -8,7 +8,6 @@ export const fetchInstructorReviews = async (instructorId) => {
             throw new Error('Failed to fetch reviews');
         }
         const reviews = await response.json();
-        console.log(reviews);
         return reviews; // Return the review count or data
     } catch (error) {
         console.error('Error fetching reviews:', error);

@@ -1,28 +1,23 @@
-import React from 'react';
+import React from "react";
 import FormInput from "../FormInput";
-
-import whiteLogo from "../../../assets/photos/icons/logo-white.PNG"
+import useRegisterForm from "../../../hooks/useRegisterForm";
+import whiteLogo from "../../../assets/photos/icons/logo-white.PNG";
 
 function RegisterForm() {
+    const { formData, error, success, handleChange, handleSubmit } = useRegisterForm();
+
     return (
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <img src={whiteLogo} alt="logo" />
             <h2>CREATE ACCOUNT</h2>
 
             <FormInput
-                label="Firstname"
+                label="Username"
                 type="text"
-                id="first-name"
-                placeholder="firstname ..."
+                id="username"
+                placeholder="username ..."
                 required={true}
-            />
-
-            <FormInput
-                label="Lastname"
-                type="text"
-                id="last-name"
-                placeholder="lastname ..."
-                required={true}
+                onChange={handleChange}
             />
 
             <FormInput
@@ -31,6 +26,7 @@ function RegisterForm() {
                 id="email"
                 placeholder="exemple@email.com ..."
                 required={true}
+                onChange={handleChange}
             />
 
             <FormInput
@@ -39,15 +35,34 @@ function RegisterForm() {
                 id="password"
                 placeholder="password ..."
                 required={true}
+                onChange={handleChange}
             />
 
             <FormInput
                 label="Password Confirmation"
                 type="password"
-                id="password-confirmation"
-                placeholder="password ..."
+                id="passwordConfirmation"
+                placeholder="confirm password ..."
                 required={true}
+                onChange={handleChange}
             />
+
+            {/* Role Selection */}
+            <div>
+                <label htmlFor="role">Role</label>
+                <select
+                    id="role"
+                    value={formData.role}
+                    onChange={handleChange}
+                    required
+                >
+                    <option value="STUDENT">STUDENT</option>
+                    <option value="INSTRUCTOR">INSTRUCTOR</option>
+                </select>
+            </div>
+
+            {error && <p style={{ color: "red" }}>{error}</p>}
+            {success && <p style={{ color: "green" }}>{success}</p>}
 
             <button type="submit">
                 <svg

@@ -43,6 +43,18 @@ form input{
     margin-bottom: 1.5rem;
 }
 
+form select{
+    display: block;
+    text-align: left;
+    height: 2rem;
+    width: 91% ;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    margin-left: 1rem;
+    padding: 0.2rem 0.2rem 0.2rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
 ::placeholder{
     font-size: 0.8rem;
     color: rgb(153, 153, 153);

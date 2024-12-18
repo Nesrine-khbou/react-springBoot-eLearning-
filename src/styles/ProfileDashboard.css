@@ -1,0 +1,172 @@
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    background-color: #f9f9f9;
+    min-height: calc(100vh - 11rem); /* Adjust height for header and footer */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #1f2937;
+    color: #fff;
+    padding: 1rem;
+    position: sticky;
+    height: calc(100vh - 6.5rem);
+}
+
+.sidebar .logo {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar li:hover {
+    color: rgb(0, 197, 174);
+}
+
+/* Sidebar Link Styling */
+.sidebar-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent (white) */
+    display: block; /* Ensure it takes up the full width of the parent li */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.sidebar-link:hover {
+    color: rgb(0, 197, 174); /* Same hover color as li */
+}
+
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+#main-title {
+    background-color: rgb(4, 186, 165);
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    color: white;
+    font-weight: bold;
+    border-left: 8px solid rgb(1, 154, 136);
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Profile Cards */
+.info-card, .bio-card, .interests-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+    flex: 2;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.avatar img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.details {
+    margin-left: 1.5rem;
+}
+
+.details p {
+    margin: 0.5rem 0;
+    color: #6b7280;
+}
+
+/* Form Input Styling */
+.details input,
+.bio-card textarea,
+.interests-card input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+.details input:focus,
+.bio-card textarea:focus,
+.interests-card input:focus {
+    border-color: rgb(4, 186, 165);
+    outline: none;
+    box-shadow: 0 0 5px rgba(4, 186, 165, 0.3);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Updated Edit Buttons */
+.edit-buttons {
+    justify-content: center;
+    margin: auto;
+    margin-top: 1.5rem;
+    width: 40%;
+}
+
+.info-card .edit-buttons,
+.additional-info .edit-buttons {
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 1rem;
+}
+
+
+button {
+    padding: 0.75rem 2rem;
+    background-color: rgb(4, 186, 165);
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(1, 154, 136);
+}
+
+/* Additional Info */
+.additional-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}

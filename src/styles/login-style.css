@@ -111,3 +111,19 @@ button p{
 #forgot_password:hover{
     color: rgb(9, 98, 154);
 }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+button[disabled] {
+    cursor: not-allowed;
+}

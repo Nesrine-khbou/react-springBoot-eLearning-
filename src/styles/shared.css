@@ -100,6 +100,15 @@ li {
     color: white;
 }
 
+#logout{
+    background-color: rgba(53, 53, 52, 0.813);
+    transition: box-shadow 0.3s ease-out;
+}
+
+#logout:hover {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.545);
+}
+
 #register{
     background-color: rgba(53, 53, 52, 0.813);
     transition: box-shadow 0.3s ease-out;

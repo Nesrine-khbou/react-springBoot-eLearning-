@@ -56,3 +56,5 @@ export const deleteCourse = async (id) => {
         throw error;
     }
 };
+
+

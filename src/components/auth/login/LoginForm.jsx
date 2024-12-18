@@ -1,38 +1,44 @@
-import React from 'react';
+import React from "react";
+import useLoginForm from "../../../hooks/useLoginForm";
 import FormInput from "../FormInput";
-
-import whiteLogo from "../../../assets/photos/icons/logo-white.PNG"
+import whiteLogo from "../../../assets/photos/icons/logo-white.PNG";
 
 const LoginForm = () => {
+    const { formData, error, loading, handleChange, handleSubmit } = useLoginForm();
+
     return (
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <img src={whiteLogo} alt="logo" />
             <h2>WELCOME AGAIN</h2>
 
+            {/* Username Input */}
             <FormInput
-                type="email"
-                id="email"
-                label="Login"
-                placeholder="exemple@email.com ..."
+                type="text"
+                id="username"
+                label="Username"
+                placeholder="username ..."
                 required
+                onChange={handleChange}
+                value={formData.username}
             />
 
+            {/* Password Input */}
             <FormInput
                 type="password"
                 id="password"
                 label="Password"
                 placeholder="password ..."
                 required
+                onChange={handleChange}
+                value={formData.password}
             />
 
-            {/* Checkbox for Remember Me */}
-            <div id="remember-me-checkbox">
-                <input type="checkbox" id="Remember-Me" />
-                <label htmlFor="Remember-Me">Remember Me</label>
-            </div>
+            {/* Error Message */}
+            {error && <p className="error-message">{error}</p>}
 
-            {/* Submit button */}
-            <button type="submit">
+            {/* Submit Button */}
+            <button type="submit" disabled={loading}>
+                <p>{loading ? "Logging in..." : "Login"}</p>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -47,11 +53,7 @@ const LoginForm = () => {
                         d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
                     />
                 </svg>
-                <p>Login</p>
             </button>
-
-            {/* Forgot password link */}
-            <a href="#" id="forgot_password">Forgot Your Password?</a>
         </form>
     );
 };

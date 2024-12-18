@@ -15,7 +15,6 @@ function CourseDetails() {
             try {
                 const courseData = await getCourseById(id); // Call the service
                 setCourse(courseData); // Set the course data
-                console.log(courseData);
             } catch (error) {
                 console.error("Error fetching course:", error);
             } finally {

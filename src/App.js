@@ -10,6 +10,10 @@ import Exercises from "./components/exercices/Exercises";
 import Login from "./components/auth/login/Login";
 import Register from "./components/auth/register/Register";
 import CourseDetails from "./components/courseDetails/CourseDetails";
+import InstructorPage from "./components/instructorPages/InstructorPage";
+import ProfilePage from "./components/studentPages/profile/ProfilePage";
+import EnrolledCourses from "./components/studentPages/enrolledCourses/EnrolledCourses";
+import MyQuizzesPage from "./components/studentPages/takenQuizzes/MyQuizzesPage";
 
 function App() {
     return (
@@ -24,6 +28,12 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/course/:id" element={<CourseDetails />} />
+                <Route path="/instructor-interface" element={<InstructorPage/>} />
+                <Route path="/student-interface" element={<ProfilePage/>} />
+                <Route path="/profile" element={<ProfilePage/>} />
+                <Route path="/enrolled-courses" element={<EnrolledCourses/>} />
+                <Route path="/my-quizzes" element={<MyQuizzesPage/>} />
+
                 <Route path="*" element={<Home />} /> {/* Default page for unmatched routes */}
             </Routes>
             <Footer />

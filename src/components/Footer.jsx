@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <footer>
             <img src={logoBlack} alt="logo-black" />
-            <h3>Hamdaoui Academy</h3>
+            <h3>Nesrine Academy</h3>
             <p>
                 Tunisian E-learning platform that provides free and paid Web development
                 courses and tutorials in the Arabic language.
@@ -47,7 +47,7 @@ const Footer = () => {
                 <li><a href="">Tests</a></li>
             </ul>
 
-            <p id="rights">All rights reserved for HamdaouiAcademy.com © 2022</p>
+            <p id="rights">All rights reserved for NesrineAcademy.com © 2022</p>
         </footer>
     );
 };

@@ -1,15 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import stars from "../../assets/photos/images/stars.PNG"; // Static image
+import React from "react";
+import {Link} from "react-router-dom";
 
-const CourseItem = ({ image, title, detailsLink }) => {
+const EnrolledCourseItem = ({ image, title, detailsLink }) => {
     return (
         <li className="course-option">
-            {/* Ensure the image URL is valid */}
             <img src={image} alt={`${title}-icon`} className="web-tools-icons" />
-            <p className="free-btn">Free</p>
             <h2>{title}</h2>
-            <img src={stars} alt="stars" className="stars-img" />
             <Link to={detailsLink}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                     <path
@@ -18,10 +14,10 @@ const CourseItem = ({ image, title, detailsLink }) => {
                         clipRule="evenodd"
                     />
                 </svg>
-                <p>details</p>
+                <p>Details</p>
             </Link>
         </li>
     );
 };
 
-export default CourseItem;
+export default EnrolledCourseItem;

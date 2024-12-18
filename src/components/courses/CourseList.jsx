@@ -9,10 +9,13 @@ const CourseList = () => {
     // Fetch courses when the component mounts
     useEffect(() => {
         const fetchCourses = async () => {
+            const token = localStorage.getItem("token");
+            const role = localStorage.getItem("userRole");
+            const userData = JSON.parse(localStorage.getItem("userData"));
+            console.log("user data in courses : " ,userData)
             try {
                 const data = await getCourses(); // Fetch courses from the API
                 setCourses(data); // Set the fetched courses in the state
-                console.log(data)
             } catch (error) {
                 console.error("Failed to fetch courses:", error);
             } finally {
