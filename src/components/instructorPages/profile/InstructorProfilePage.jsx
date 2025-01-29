@@ -1,10 +1,9 @@
 import React from "react";
 import "../../../styles/ProfileDashboard.css";
-import "../../../styles/quizzes-style.css"
-import StudentSideBar from "../../SideBar/StudentSideBar";
-import TakenQuizzesList from "./TakenQuizzesList";
+import InstructorProfile from "./InstructorProfile";
+import InstructorSideBar from "../../SideBar/InstructorSideBar";
 
-function MyQuizzesPage() {
+function InstructorProfilePage() {
 
     return (
         <div>
@@ -14,10 +13,9 @@ function MyQuizzesPage() {
 
             {/* InstructorProfile Dashboard */}
             <div className="dashboard-container">
-                <StudentSideBar/>
-
+                <InstructorSideBar/>
                 {/* Main content */}
-                <TakenQuizzesList/>
+                <InstructorProfile/>
             </div>
         </div>
     );
@@ -25,4 +23,4 @@ function MyQuizzesPage() {
 
 
 
-export default MyQuizzesPage;
+export default InstructorProfilePage;

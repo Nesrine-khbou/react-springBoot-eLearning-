@@ -12,12 +12,15 @@ import exercices_logo from "../assets/photos/icons/exercices.PNG";
 
 const Header = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [role, setRole] = useState(""); // State to store the role
     const navigate = useNavigate();
 
     // Check login status on component mount
     useEffect(() => {
         const token = localStorage.getItem("token");
+        const storedRole = localStorage.getItem("userRole");
         setIsLoggedIn(!!token); // Set to true if token exists
+        setRole(storedRole || "");
     }, []);
 
     // Handle logout
@@ -27,6 +30,7 @@ const Header = () => {
         navigate("/"); // Redirect to the home page
 
     };
+    console.log(`/${role.toLowerCase()}-interface`);
 
     return (
         <header>
@@ -73,7 +77,7 @@ const Header = () => {
             <div id="register-login">
                 {isLoggedIn ? (
                     <>
-                        <Link to="/student-interface" id="register">
+                        <Link to={`/${role.toLowerCase()}-interface`} id="register">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "../../../styles/ProfileDashboard.css";
 
-function Profile() {
+function InstructorProfile() {
     const [isEditing, setIsEditing] = useState(false);
     const [profile, setProfile] = useState({
         id: null,
         name: "",
         email: "",
         address: "",
-        bio: "Write something about you ...",
-        interests: "Not yet specified",
+        headline: "",
+        description: "",
         image: "default-pic.PNG",
     });
     const [newImage, setNewImage] = useState(null);
@@ -56,8 +56,8 @@ function Profile() {
                     name: data.username || "",
                     email: data.email || "",
                     address: data.address || "Not specified",
-                    bio: "Write something about you ...",
-                    interests: "Not yet specified",
+                    headline: data.headline||"Write something about you ...",
+                    description: data.description||"Not yet specified",
                     image: data.image || "default-pic.PNG",
                 });
 
@@ -105,6 +105,8 @@ function Profile() {
                 id: profile.id,
                 username: profile.name,
                 email: profile.email,
+                headline: profile.headline ,
+                description: profile.description,
                 image: newImage ? newImage.name : profile.image,
             };
 
@@ -135,8 +137,8 @@ function Profile() {
                 name: updatedData.username || profile.name,
                 email: updatedData.email || profile.email,
                 address: updatedData.address || "Not specified",
-                bio: updatedData.bio || profile.bio,
-                interests: updatedData.interests || profile.interests,
+                headline: updatedData.headline || profile.headline,
+                description: updatedData.description || profile.description,
                 image: updatedData.image || profile.image,
             });
 
@@ -152,7 +154,7 @@ function Profile() {
     return (
         <div className="main-content">
             <div id="main-title">
-                <p>Student Dashboard &gt; My Profile</p>
+                <p>Instructor Dashboard &gt; My Profile</p>
             </div>
             <div className="profile-container">
                 <div className="info-card">
@@ -200,19 +202,19 @@ function Profile() {
                 </div>
                 <div className="additional-info">
                     <div className="bio-card">
-                        <h4>📄 Bio</h4>
+                        <h4>📄 Headline</h4>
                         {isEditing ? (
-                            <textarea name="bio" value={profile.bio} onChange={handleChange} />
+                            <textarea name="headline" value={profile.headline} onChange={handleChange} />
                         ) : (
-                            <p>{profile.bio}</p>
+                            <p>{profile.headline}</p>
                         )}
                     </div>
                     <div className="interests-card">
-                        <h4>🎯 Interests</h4>
+                        <h4>🎯 Description</h4>
                         {isEditing ? (
-                            <textarea name="interests" value={profile.interests} onChange={handleChange} />
+                            <textarea name="description" value={profile.description} onChange={handleChange} />
                         ) : (
-                            <p>{profile.interests}</p>
+                            <p>{profile.description}</p>
                         )}
                     </div>
                     <div className="edit-buttons">
@@ -228,4 +230,4 @@ function Profile() {
     );
 }
 
-export default Profile;
+export default InstructorProfile;

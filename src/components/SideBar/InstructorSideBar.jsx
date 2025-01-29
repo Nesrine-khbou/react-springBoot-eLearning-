@@ -2,23 +2,23 @@ import React from "react";
 import "../../styles/ProfileDashboard.css";
 import { Link } from "react-router-dom";
 
-function Sidebar() {
+function StudentSideBar() {
     return (
         <div className="sidebar">
             <h2 className="logo">Dashboard</h2>
             <ul>
                 <li>
-                    <Link to="/enrolled-courses" className="sidebar-link">
+                    <Link to="/courses-management" className="sidebar-link">
                         My courses
                     </Link>
                 </li>
                 <li>
-                    <Link to="/my-quizzes" className="sidebar-link">
+                    <Link to="/quizzes-management" className="sidebar-link">
                         My quizzes
                     </Link>
                 </li>
                 <li>
-                    <Link to="/profile" className="sidebar-link">
+                    <Link to="/instructor-profile" className="sidebar-link">
                         Profile
                     </Link>
                 </li>
@@ -27,4 +27,4 @@ function Sidebar() {
     );
 }
 
-export default Sidebar;
+export default StudentSideBar;

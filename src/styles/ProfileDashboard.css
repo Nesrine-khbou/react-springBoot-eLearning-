@@ -5,7 +5,7 @@
     min-height: calc(100vh - 11rem); /* Adjust height for header and footer */
 }
 
-/* Sidebar Styling */
+/* StudentSideBar Styling */
 .sidebar {
     width: 250px;
     background-color: #1f2937;
@@ -36,7 +36,7 @@
     color: rgb(0, 197, 174);
 }
 
-/* Sidebar Link Styling */
+/* StudentSideBar Link Styling */
 .sidebar-link {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit text color from parent (white) */
@@ -66,14 +66,14 @@
     border-left: 8px solid rgb(1, 154, 136);
 }
 
-/* Profile Container */
+/* InstructorProfile Container */
 .profile-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
 
-/* Profile Cards */
+/* InstructorProfile Cards */
 .info-card, .bio-card, .interests-card {
     background-color: #fff;
     border-radius: 8px;
@@ -148,7 +148,7 @@ textarea {
 }
 
 
-button {
+.update {
     padding: 0.75rem 2rem;
     background-color: rgb(4, 186, 165);
     color: #fff;

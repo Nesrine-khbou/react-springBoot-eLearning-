@@ -1,0 +1,147 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh; /* Limit the height of the modal */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.modal label {
+    text-align: left;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.modal input[type="text"],
+.modal textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.modal textarea {
+    resize: none;
+    height: 80px;
+}
+
+.modal .learning-point {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.modal .learning-point input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.modal .learning-point button {
+    width: 20%;
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.modal .learning-point button:hover {
+    background-color: #c0392b;
+}
+
+.modal button {
+    display: inline-block;
+    width: 40%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.modal button:first-of-type {
+    background-color: #3498db;
+    color: white;
+}
+
+.modal button:first-of-type:hover {
+    background-color: rgb(9, 129, 178);
+}
+
+.modal button:last-of-type {
+    background-color: rgb(1, 172, 152);
+    color: white;
+}
+
+.modal button:last-of-type:hover {
+    background-color: rgb(1, 172, 152);
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Add What Will You Learn section */
+.modal h4 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.modal .add-learning-point-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.modal .add-learning-point-btn:hover {
+    background-color: #27ae60;
+}
+
+.add-course-btn{
+    margin-top: 4rem;
+    margin-left: 7rem;
+    padding: 1rem 2rem;
+    width: 15%;
+    background-color: rgb(1, 172, 152);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.add-course-btn:hover{
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}

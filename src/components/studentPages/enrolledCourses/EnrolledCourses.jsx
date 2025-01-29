@@ -3,7 +3,7 @@ import React from "react";
 import "../../../styles/shared.css";
 import "../../../styles/enrolled-courses-style.css";
 import "../../../styles/ProfileDashboard.css";
-import Sidebar from "../../dashboard/SideBar";
+import StudentSideBar from "../../SideBar/StudentSideBar";
 import EnrolledCourseList from "./EnrolledCoursesList";
 
 function ProfilePage() {
@@ -14,9 +14,9 @@ function ProfilePage() {
             {/* Adding spacing to push content below fixed header */}
             <div id="space"></div>
 
-            {/* Profile Dashboard */}
+            {/* InstructorProfile Dashboard */}
             <div className="dashboard-container">
-                <Sidebar/>
+                <StudentSideBar/>
 
                 {/* Main content */}
                 <EnrolledCourseList/>

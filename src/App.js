@@ -14,6 +14,8 @@ import InstructorPage from "./components/instructorPages/InstructorPage";
 import ProfilePage from "./components/studentPages/profile/ProfilePage";
 import EnrolledCourses from "./components/studentPages/enrolledCourses/EnrolledCourses";
 import MyQuizzesPage from "./components/studentPages/takenQuizzes/MyQuizzesPage";
+import InstructorProfilePage from "./components/instructorPages/profile/InstructorProfilePage";
+import CoursesManagementPage from "./components/instructorPages/coursesManagement/CoursesManagementPage";
 
 function App() {
     return (
@@ -28,11 +30,14 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/course/:id" element={<CourseDetails />} />
-                <Route path="/instructor-interface" element={<InstructorPage/>} />
                 <Route path="/student-interface" element={<ProfilePage/>} />
                 <Route path="/profile" element={<ProfilePage/>} />
                 <Route path="/enrolled-courses" element={<EnrolledCourses/>} />
                 <Route path="/my-quizzes" element={<MyQuizzesPage/>} />
+                <Route path="/instructor-interface" element={<InstructorProfilePage/>} />
+                <Route path="/instructor-profile" element={<InstructorProfilePage/>} />
+                <Route path="/courses-management" element={<CoursesManagementPage/>} />
+
 
                 <Route path="*" element={<Home />} /> {/* Default page for unmatched routes */}
             </Routes>
