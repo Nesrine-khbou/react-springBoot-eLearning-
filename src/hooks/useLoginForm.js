@@ -24,7 +24,7 @@ const useLoginForm = () => {
         try {
             // Step 1: Login and get token, role, and userId
             const { token, role, userId } = await loginUser(formData);
-
+            console.log(" user token: ", token);
             // Step 2: Fetch user data based on role and userId
             const userData = await fetchUserData(token, role, userId);
 

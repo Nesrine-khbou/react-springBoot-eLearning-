@@ -15,6 +15,7 @@ export const loginUser = async (credentials) => {
 
 
 export const fetchUserData = async (token, role, userId) => {
+    console.log("Fetching user data:", token, role, userId);
     const endpoint =
         role === "STUDENT"
             ? `http://localhost:8080/api/students/${userId}`

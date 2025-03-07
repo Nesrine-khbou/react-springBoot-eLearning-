@@ -2,8 +2,10 @@ import axios from "axios";
 
 const API_BASE_URL = "http://localhost:8080/api/enrollments"; // Update with your backend URL
 
-export const enrollStudentInCourse = async (studentId, courseId, token) => {
+export const enrollStudentInCourse = async (studentId, courseId) => {
     try {
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
         const response = await axios.post(
             `${API_BASE_URL}?studentId=${studentId}&courseId=${courseId}`,
             {}, // Empty body

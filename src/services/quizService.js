@@ -3,7 +3,12 @@ const API_URL = "http://localhost:8080/api/quizzes";
 // Fetch all quizzes
 export const fetchQuizzes = async () => {
     try {
-        const response = await fetch(API_URL);
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+        const response = await fetch(API_URL, {
+            headers: {
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+            },
+        });
         if (!response.ok) {
             throw new Error("Failed to fetch quizzes");
         }
@@ -17,7 +22,12 @@ export const fetchQuizzes = async () => {
 // Fetch quiz details by quizId
 export const fetchQuizDetailsById = async (quizId) => {
     try {
-        const response = await fetch(`${API_URL}/${quizId}`);
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+        const response = await fetch(`${API_URL}/${quizId}`, {
+            headers: {
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+            },
+        });
         if (!response.ok) {
             throw new Error("Failed to fetch quiz details");
         }
@@ -31,9 +41,12 @@ export const fetchQuizDetailsById = async (quizId) => {
 // Add a new quiz
 export const addQuiz = async (quiz) => {
     try {
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
         const response = await fetch(API_URL, {
             method: "POST",
             headers: {
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(quiz),
@@ -51,9 +64,12 @@ export const addQuiz = async (quiz) => {
 // Update a quiz
 export const updateQuiz = async (id, quiz) => {
     try {
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
         const response = await fetch(`${API_URL}/${id}`, {
             method: "PUT",
             headers: {
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(quiz),
@@ -71,8 +87,13 @@ export const updateQuiz = async (id, quiz) => {
 // Delete a quiz
 export const deleteQuiz = async (id) => {
     try {
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
         const response = await fetch(`${API_URL}/${id}`, {
             method: "DELETE",
+            headers: {
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+            },
         });
         if (!response.ok) {
             throw new Error("Failed to delete quiz");

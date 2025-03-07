@@ -3,7 +3,13 @@
 // Fetch the total number of reviews for an instructor
 export const fetchInstructorReviews = async (instructorId) => {
     try {
-        const response = await fetch(`http://localhost:8080/api/instructors/${instructorId}/reviews`);
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
+        const response = await fetch(`http://localhost:8080/api/instructors/${instructorId}/reviews`, {
+            headers: {
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+            },
+        });
         if (!response.ok) {
             throw new Error('Failed to fetch reviews');
         }
@@ -18,7 +24,13 @@ export const fetchInstructorReviews = async (instructorId) => {
 // Fetch the total number of courses presented by an instructor
 export const fetchInstructorCoursesCount = async (instructorId) => {
     try {
-        const response = await fetch(`http://localhost:8080/api/instructors/${instructorId}/courses/count`);
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
+        const response = await fetch(`http://localhost:8080/api/instructors/${instructorId}/courses/count`, {
+            headers: {
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+            },
+        });
         if (!response.ok) {
             throw new Error('Failed to fetch courses count');
         }

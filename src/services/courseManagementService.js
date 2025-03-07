@@ -6,10 +6,14 @@ const API_BASE_URL = "http://localhost:8080";
 // Function to add a course
 export const addCourse = async (courseData) => {
     try {
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
         const response = await fetch(`${API_BASE_URL}/courses`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+
             },
             body: JSON.stringify(courseData),
         });
@@ -29,10 +33,14 @@ export const addCourse = async (courseData) => {
 // Function to add content to a course
 export const addContent = async (contentData) => {
     try {
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
         const response = await fetch(`${API_BASE_URL}/content`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+
             },
             body: JSON.stringify(contentData),
         });
@@ -70,8 +78,13 @@ export const fetchInstructorCourses = async (userData, setCourses, setLoading) =
 // Function to delete a course
 export const deleteInstructorCourse = async (courseId) => {
     try {
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
         const response = await fetch(`${API_BASE_URL}/courses/${courseId}`, {
             method: "DELETE",
+            headers: {
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+            },
         });
 
         if (!response.ok) {
@@ -89,6 +102,8 @@ export const deleteInstructorCourse = async (courseId) => {
 // Function to update a course
 export const updateCourse = async (courseId, courseData) => {
     try {
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
         console.log(courseData)
         const dataToUpdate={
             "title":courseData.title,
@@ -101,6 +116,8 @@ export const updateCourse = async (courseId, courseData) => {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+
             },
             body: JSON.stringify(dataToUpdate),
         });
@@ -121,7 +138,13 @@ export const updateCourse = async (courseId, courseData) => {
 // Function to fetch a course by its ID
 export const getCourseById = async (courseId) => {
     try {
-        const response = await fetch(`${API_BASE_URL}/courses/${courseId}`);
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
+        const response = await fetch(`${API_BASE_URL}/courses/${courseId}`, {
+            headers: {
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+            },
+        });
 
         if (!response.ok) {
             const errorData = await response.json();
@@ -142,13 +165,17 @@ export const updateContent = async (contentId, contentData) => {
         "title":contentData.title,
         "videoUrl": contentData.videoUrl,
         "category":contentData.category,
-        "duration": contentData.duration
+        "videoDuration": contentData.videoDuration
     }
     try {
+        const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
         const response = await fetch(`${API_BASE_URL}/content/${contentId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+
             },
             body: JSON.stringify(updatedContentData),
         });
