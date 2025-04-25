@@ -9,7 +9,7 @@ export const loginUser = async (credentials) => {
         const data = await response.json();
         throw new Error(data.message || "Login failed");
     }
-
+    console.log(response.json())
     return await response.json(); // { token, role, userId }
 };
 

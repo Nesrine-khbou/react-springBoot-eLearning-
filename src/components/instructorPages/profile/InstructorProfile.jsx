@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../../styles/ProfileDashboard.css";
+import {json} from "react-router-dom";
 
 function InstructorProfile() {
     const [isEditing, setIsEditing] = useState(false);
@@ -26,7 +27,7 @@ function InstructorProfile() {
                 if (!token || !role || !userData?.id) {
                     throw new Error("User authentication data is missing.");
                 }
-                console.log("user daata : ",userData)
+                console.log("user daata : ", JSON.parse(localStorage.getItem("userData")))
                 console.log("token : ", token)
 
                 // Fetch user profile data
@@ -109,6 +110,7 @@ function InstructorProfile() {
                 description: profile.description,
                 image: newImage ? newImage.name : profile.image,
             };
+            console.log("hedhaaaaa:",JSON.stringify(updatedProfile) )
 
             const response = await fetch(
                 `http://localhost:8080/api/${role.toLowerCase()}s/${userData.id}`,
@@ -121,7 +123,6 @@ function InstructorProfile() {
                     body: JSON.stringify(updatedProfile),
                 }
             );
-
             if (!response.ok) {
                 throw new Error("Failed to update profile.");
             }

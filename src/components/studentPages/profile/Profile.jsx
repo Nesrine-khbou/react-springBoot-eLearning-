@@ -8,8 +8,8 @@ function Profile() {
         name: "",
         email: "",
         address: "",
-        bio: "Write something about you ...",
-        interests: "Not yet specified",
+        bio: "",
+        interests: "",
         image: "default-pic.PNG",
     });
     const [newImage, setNewImage] = useState(null);
@@ -48,7 +48,6 @@ function Profile() {
 
                 // Parse the JSON response
                 const data = await response.json();
-                console.log("Fetched data: ", data);
 
                 // Update the profile state
                 setProfile({
@@ -56,12 +55,12 @@ function Profile() {
                     name: data.username || "",
                     email: data.email || "",
                     address: data.address || "Not specified",
-                    bio: "Write something about you ...",
-                    interests: "Not yet specified",
+                    bio: data.bio||"Write something about you ...",
+                    interests: data.interests||"Not yet specified",
                     image: data.image || "default-pic.PNG",
                 });
 
-                console.log("InstructorProfile updated successfully.");
+                console.log("profile updated successfully.");
             } catch (error) {
                 console.error("Error fetching user profile:", error.message);
             }
@@ -70,10 +69,8 @@ function Profile() {
         fetchUserProfile();
     }, []);
 
-    // Log the profile whenever it changes
     useEffect(() => {
         if (profile) {
-            console.log("Updated profile: ", profile);
         }
     }, [profile]);
     const handleChange = (e) => {
@@ -105,6 +102,8 @@ function Profile() {
                 id: profile.id,
                 username: profile.name,
                 email: profile.email,
+                bio: profile.bio ,
+                interests: profile.interests,
                 image: newImage ? newImage.name : profile.image,
             };
 
@@ -119,16 +118,14 @@ function Profile() {
                     body: JSON.stringify(updatedProfile),
                 }
             );
+            console.log("updated profile sent : ",updatedProfile)
 
             if (!response.ok) {
                 throw new Error("Failed to update profile.");
             }
 
             const updatedData = await response.json();
-            console.log("response : ")
-            console.log(response);
-            console.log("updated data")
-            console.log(updatedData);
+
             // Update profile state with updated data
             setProfile({
                 id : updatedData.id || profile.id,
@@ -208,9 +205,9 @@ function Profile() {
                         )}
                     </div>
                     <div className="interests-card">
-                        <h4>🎯 Interests</h4>
+                        <h4>🎯 interests</h4>
                         {isEditing ? (
-                            <textarea name="interests" value={profile.interests} onChange={handleChange} />
+                            <textarea name="description" value={profile.interests} onChange={handleChange} />
                         ) : (
                             <p>{profile.interests}</p>
                         )}
