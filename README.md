@@ -1,6 +1,11 @@
 
 # Getting Started with Create React App
 
+## Demo Videos 🎥
+[Click here to watch the instructor demo](https://drive.google.com/file/d/16N57W6eIbZBdGcyZlsr9t_m9ecLIGvnr/view?usp=sharing)
+<br />
+[Click here to watch the student demo](https://drive.google.com/file/d/1svp4HXcCfsAjQHGeGKJt8PGsi5XBoeqQ/view?usp=sharing)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -70,5 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-## Project backend link (under development)
+## Project backend link 
 https://github.com/Nesrine-khbou/eLearnning_backend
