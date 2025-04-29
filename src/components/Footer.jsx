@@ -1,5 +1,5 @@
 import React from 'react';
-import logoBlack from '../assets/photos/icons/logo-black.PNG';
+import logoBlack from '../assets/photos/icons/logo.PNG';
 import facebookIcon from '../assets/photos/icons/facebook.PNG';
 import youtubeIcon from '../assets/photos/icons/youtube.PNG';
 import instagramIcon from '../assets/photos/icons/instagram.PNG';
@@ -11,7 +11,7 @@ import "../styles/style.css";
 const Footer = () => {
     return (
         <footer>
-            <img src={logoBlack} alt="logo-black" />
+            <img src={logoBlack} alt="logo" />
             <h3>Nesrine Academy</h3>
             <p>
                 Tunisian E-learning platform that provides free and paid Web development

@@ -2,9 +2,9 @@
 # Getting Started with Create React App
 
 ## Demo Videos 🎥
-[Click here to watch the instructor demo](https://drive.google.com/file/d/16N57W6eIbZBdGcyZlsr9t_m9ecLIGvnr/view?usp=sharing)
+[Click here to watch the instructor demo](https://drive.google.com/file/d/1aDkhkfw51WYIPyyLnnEQdlPQDfhX54qL/view?usp=sharing)
 <br />
-[Click here to watch the student demo](https://drive.google.com/file/d/1svp4HXcCfsAjQHGeGKJt8PGsi5XBoeqQ/view?usp=sharing)
+[Click here to watch the student demo](https://drive.google.com/file/d/1hHRof2gPeUVELk0fTfqOYFhbxb5pd5YG/view?usp=sharing)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
